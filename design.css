@@ -1,0 +1,388 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    direction: ltl;
+    text-align: center;
+}
+
+/* العناوين*/
+header {
+    background: linear-gradient(90deg, #b00000, #c00);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* شريط التنقل */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* المحتوى الرئيسي */
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #b00000;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* الأزرار */
+button {
+    background-color: #b00000;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+/*  */
+/* تصميم صفحة contact */
+
+.contact-container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* عنوان الصفحة */
+.contact-container h2 {
+    color: #b00000;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+
+
+.contact-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/*  */
+/* تصميم شاشة البداية */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(41, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeOut 10s forwards;
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* إخفاء المحتوى الأساسي في البداية */
+.stadium-content {
+    opacity: 0;
+    animation: fadeIn 3s forwards 3s; /* يظهر بعد 3 ثوانٍ */
+}
+/* تأثير الظهور */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*  */
+
+/* تصميم صفحة التواصل */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.contact-form h2 {
+    color: #b00000;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #b00000;
+    outline: none;
+    box-shadow: 0 0 8px rgba(176, 0, 0, 0.3);
+}
+
+.contact-form button {
+    background-color: #b00000;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+/*  */
+/* تصميم السلايدر */
+.slider {
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* تحريك الصور داخل السلايدر */
+.slides {
+    display: flex;
+    width: 150%;
+    animation: slide 25s infinite;
+}
+
+/* جعل كل صورة تأخذ نفس مساحة السلايدر */
+.slides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* تحريك الصور */
+@keyframes slide {
+    0%  { transform: translateX(0%); }
+    25% { transform: translateX(-200%); }
+    50% { transform: translateX(-400%); }
+    75% { transform: translateX(-600%); }
+    100% { transform: translateX(0%); }
+}
+
+/*  */
+/* icons   */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+    width: 45px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* تصميم صفحة thank-you */
+.thank-you-container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.thank-you-container h1 {
+    color: #b00000;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.thank-you-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.thank-you-container .btn {
+    background-color: #b00000;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.thank-you-container .btn:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* تصميم صفحة team */
+.player {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    
+}
+
+.player img {
+    width: 50px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.player img:hover {
+    transform: scale(1.2);
+}
+
+/* تصميم صفحة  Historic */
+.history-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.history-item img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.history-item img:hover {
+    transform: scale(1.05);
+}
+
+/*  */
+.content {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.05);
+}
+
+.hero {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+}
+/*  icons  */
+.social-icons a img {
+    width: 45px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* الفوتر */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 16px;
+}
